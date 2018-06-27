@@ -1,0 +1,166 @@
+$shade1: #383536; // Background Highlight
+$shade2: #E8E9EB; // Text
+$shade3: #636564; // Lightest Dark
+$shade4: #2A2B2A; // Background
+$shade5: #ED474A; // Red
+$shade6: #2274A5; // Blue
+$shade7: #DDB967; // Yellow
+
+$space1: 5px;
+$space2: 10px;
+$space4: 20px;
+$space16:  80px;
+
+$break-small: 800px;
+
+body {
+	background-color: $shade4;
+}
+
+#app { 
+	color: $shade2;
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-around;
+	
+	.background-shade-1 {
+		background-color: $shade1;
+	}
+
+	.background-shade-2 {
+		background-color: $shade2;
+	}
+
+	.background-shade-3 {
+		background-color: $shade3;
+	}
+
+	.background-shade-4 {
+		background-color: $shade4;
+	}
+
+	.background-shade-5 {
+		background-color: $shade5;
+	}
+
+	.background-shade-6 {
+		background-color: $shade6;
+	}
+
+	.background-shade-7 {
+		background-color: $shade7;
+	}
+
+	::selection {
+		background-color: $shade2;
+		color: $shade4;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 300px;
+		transform: rotate(-20deg);
+		background-color: $shade1;
+		padding: $space2 $space4;
+	}
+
+	input {
+		border: none;
+		outline: none;
+		background-color: $shade4;
+		color: $shade2;
+	}
+
+	.background {
+		background-color: $shade4;
+		position:fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+	}
+
+	.content {
+		max-width: 800px;
+		width: 800px;
+
+		@media screen and (min-width: $break-small) {
+			position: absolute;
+		}
+	}
+
+	.force-select-all {
+		user-select: all;
+	}
+
+	.console {
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		margin-top: $space16;
+		border: $space1 solid $shade1;
+		padding: $space1;
+
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+
+		.console-output {
+			height: 200px;
+			overflow-y: auto;
+
+			font-family: monospace;
+			white-space: pre-wrap;
+			font-size: 0.6rem;
+
+			border: $space1 solid $shade1;
+			padding: $space1;
+
+			.log-item {
+				border-radius: $space1;
+				padding: $space1;
+				margin-top: $space1;
+				overflow-wrap: break-word;
+
+				&.item-in {
+					border: 1px dotted $shade6;
+				}
+
+				&.item-out {
+					border: 1px dotted $shade7;
+
+					&.error {
+						border: 1px dotted $shade5;
+					}
+				}
+			}
+		}
+
+		.console-input {
+			margin-top: $space1;
+			font-family: monospace;
+			white-space: pre;
+			font-size: 0.6rem;
+
+			border: $space1 solid $shade1;
+			padding: $space1;
+		}
+	}
+
+	.palette {
+		margin-left: 500px;
+		width: 100%;
+		position: absolute;;
+		top: 0;
+		right: 0;
+
+		.swatch {
+			height:20px;
+			width: 20px;
+		}
+	}
+
+}

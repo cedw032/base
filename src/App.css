@@ -1,0 +1,98 @@
+body {
+  background-color: #2A2B2A; }
+
+#app {
+  color: #E8E9EB;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around; }
+  #app .background-shade-1 {
+    background-color: #383536; }
+  #app .background-shade-2 {
+    background-color: #E8E9EB; }
+  #app .background-shade-3 {
+    background-color: #636564; }
+  #app .background-shade-4 {
+    background-color: #2A2B2A; }
+  #app .background-shade-5 {
+    background-color: #ED474A; }
+  #app .background-shade-6 {
+    background-color: #2274A5; }
+  #app .background-shade-7 {
+    background-color: #DDB967; }
+  #app ::selection {
+    background-color: #E8E9EB;
+    color: #2A2B2A; }
+  #app h1, #app h2, #app h3, #app h4, #app h5, #app h6 {
+    margin-top: 300px;
+    transform: rotate(-20deg);
+    background-color: #383536;
+    padding: 10px 20px; }
+  #app input {
+    border: none;
+    outline: none;
+    background-color: #2A2B2A;
+    color: #E8E9EB; }
+  #app .background {
+    background-color: #2A2B2A;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
+  #app .content {
+    max-width: 800px;
+    width: 800px; }
+    @media screen and (min-width: 800px) {
+      #app .content {
+        position: absolute; } }
+  #app .force-select-all {
+    user-select: all; }
+  #app .console {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 80px;
+    border: 5px solid #383536;
+    padding: 5px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column; }
+    #app .console .console-output {
+      height: 200px;
+      overflow-y: auto;
+      font-family: monospace;
+      white-space: pre-wrap;
+      font-size: 0.6rem;
+      border: 5px solid #383536;
+      padding: 5px; }
+      #app .console .console-output .log-item {
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 5px;
+        overflow-wrap: break-word; }
+        #app .console .console-output .log-item.item-in {
+          border: 1px dotted #2274A5; }
+        #app .console .console-output .log-item.item-out {
+          border: 1px dotted #DDB967; }
+          #app .console .console-output .log-item.item-out.error {
+            border: 1px dotted #ED474A; }
+    #app .console .console-input {
+      margin-top: 5px;
+      font-family: monospace;
+      white-space: pre;
+      font-size: 0.6rem;
+      border: 5px solid #383536;
+      padding: 5px; }
+  #app .palette {
+    margin-left: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #app .palette .swatch {
+      height: 20px;
+      width: 20px; }
